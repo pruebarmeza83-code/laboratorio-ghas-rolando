@@ -7,7 +7,7 @@ app = Flask(__name__)
 def buscar_usuario():
     nombre = request.args.get("nombre", "")
     conexion = sqlite3.connect("laboratorio.db")
-    consulta = "SELECT * FROM usuarios WHERE nombre = '" + nombre + "'"
-    filas = conexion.execute(consulta).fetchall()
+    consulta = "SELECT * FROM usuarios WHERE nombre = ?"
+    filas = conexion.execute(consulta, (nombre,)).fetchall()
     conexion.close()
     return {"usuarios": filas}
