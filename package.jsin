@@ -1,0 +1,9 @@
+{
+  "name": "laboratorio-ghas-rolando",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Laboratorio de Dependabot",
+  "dependencies": {
+    "lodash": "4.17.20"
+  }
+}
